@@ -26,7 +26,8 @@
         "Live",
         "Testing",
         "Demo",
-        "Experiment"
+        "Experiment",
+        "UAT"
        ]
       }
      ]
