@@ -1,5 +1,5 @@
 name: manage-azure-policy-0048650b
-on: push
+on:
   workflow_dispatch:
     inputs:
       remarks:
