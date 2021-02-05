@@ -1,0 +1,40 @@
+{
+ "properties": {
+  "displayName": "Correct Tags on resources",
+  "policyType": "Custom",
+  "description": "Every resource must comply to the Tags policies.",
+  "metadata": {
+   "category": "Tags",
+   "version": "1.0.0",
+   "createdBy": "5401b9c6-9585-4145-a10f-4409654d0e75",
+   "createdOn": "2021-02-05T15:36:46.2197569Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "Correct Environment Tag on resource_1",
+    "policyDefinitionId": "/subscriptions/36983755-8396-459d-8afa-b7d546b5a217/providers/Microsoft.Authorization/policyDefinitions/0b68f7b5-2b10-42d8-8545-89cece7b0a17",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Owner Tag on resource_1",
+    "policyDefinitionId": "/subscriptions/36983755-8396-459d-8afa-b7d546b5a217/providers/Microsoft.Authorization/policyDefinitions/1d2ef82a-bfc1-441e-8365-0f17ba33f40b",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Correct Scale Tag on scalable resource_1",
+    "policyDefinitionId": "/subscriptions/36983755-8396-459d-8afa-b7d546b5a217/providers/Microsoft.Authorization/policyDefinitions/3609b7e1-fdf6-4341-a2de-0a68b8dc8f0b",
+    "parameters": {},
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/subscriptions/36983755-8396-459d-8afa-b7d546b5a217/providers/Microsoft.Authorization/policySetDefinitions/23493be8d58847b590ec9a90",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "23493be8d58847b590ec9a90"
+}
