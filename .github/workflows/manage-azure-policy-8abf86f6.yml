@@ -1,5 +1,5 @@
 name: manage-azure-policy-8abf86f6
-on:
+on: push
   workflow_dispatch:
     inputs:
       remarks:
