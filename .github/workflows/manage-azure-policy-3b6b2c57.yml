@@ -1,0 +1,36 @@
+name: manage-azure-policy-3b6b2c57
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'policies/Correct_Environment_Tag_on_resource_0b68f7b5-2b10-42d8-8545-89cece7b0a17/**'
+#      - 'policies/Owner_Tag_on_resource_1d2ef82a-bfc1-441e-8365-0f17ba33f40b/**'
+#      - 'policies/Correct_Scale_Tag_on_scalable_resource_3609b7e1-fdf6-4341-a2de-0a68b8dc8f0b/**'
+#      - .github/workflows/manage-azure-policy-3b6b2c57.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_3b6b2c57}}
+        allow-no-subscriptions: true
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          policies/Correct_Environment_Tag_on_resource_0b68f7b5-2b10-42d8-8545-89cece7b0a17/**
+          policies/Owner_Tag_on_resource_1d2ef82a-bfc1-441e-8365-0f17ba33f40b/**
+          policies/Correct_Scale_Tag_on_scalable_resource_3609b7e1-fdf6-4341-a2de-0a68b8dc8f0b/**
