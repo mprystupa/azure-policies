@@ -18,52 +18,7 @@
     "filepath": "initiatives/Correct_Tags_on_resources_23493be8d58847b590ec9a90"
    }
   },
-  "parameters": {
-   "Environment Tag values": {
-    "type": "Array",
-    "metadata": {
-     "displayName": "Environment Tag values",
-     "description": "Valid values for Environment Tag."
-    },
-    "allowedValues": [
-     "Live",
-     "Testing",
-     "Demo",
-     "Experiment",
-     "UAT"
-    ],
-    "defaultValue": [
-     "Testing"
-    ]
-   },
-   "Scale Tag values": {
-    "type": "Array",
-    "metadata": {
-     "displayName": "Scale Tag values",
-     "description": "Valid values for Scale Tag."
-    },
-    "allowedValues": [
-     "Normal",
-     "Temporary"
-    ],
-    "defaultValue": [
-     "Normal"
-    ]
-   },
-   "Owner Tag values": {
-    "type": "Array",
-    "metadata": {
-     "displayName": "Owner Tag values",
-     "description": "Correct values for Owner Tag."
-    },
-    "allowedValues": [
-     "*"
-    ],
-    "defaultValue": [
-     "*"
-    ]
-   }
-  },
+  "parameters": {},
   "policyDefinitions": [
    {
     "policyDefinitionReferenceId": "CorrectEnvironmentTag",
@@ -73,7 +28,13 @@
       "value": "Environment"
      },
      "allowedValues": {
-      "value": "[parameters('Environment Tag values')]"
+      "value": [
+        "Live",
+        "Testing",
+        "Demo",
+        "Experiment",
+        "UAT"
+       ]
      }
     },
     "groupNames": []
@@ -86,7 +47,10 @@
       "value": "Scale"
      },
      "allowedValues": {
-      "value": "[parameters('Scale Tag values')]"
+      "value": [
+        "Normal",
+        "Temporary"
+       ]
      }
     },
     "groupNames": []
@@ -99,7 +63,9 @@
       "value": "Owner"
      },
      "allowedValues": {
-      "value": "[parameters('Owner Tag values')]"
+      "value": [
+        "*"
+       ]
      }
     },
     "groupNames": []
