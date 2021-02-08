@@ -1,0 +1,67 @@
+{
+ "properties": {
+  "displayName": "Correct Tags on resources",
+  "policyType": "Custom",
+  "description": "Every resource must have set of correct Tag values.",
+  "metadata": {
+   "category": "Tags",
+   "version": "1.0.0",
+   "createdBy": "5401b9c6-9585-4145-a10f-4409654d0e75",
+   "createdOn": "2021-02-08T11:17:40.1797155Z",
+   "updatedBy": "5401b9c6-9585-4145-a10f-4409654d0e75",
+   "updatedOn": "2021-02-08T11:22:49.5618543Z"
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "EnvironmentTag",
+    "policyDefinitionId": "/subscriptions/36983755-8396-459d-8afa-b7d546b5a217/providers/Microsoft.Authorization/policyDefinitions/b5725656-a824-4e73-9158-33f303003ebd",
+    "parameters": {
+     "tagName": {
+      "value": "Environment"
+     },
+     "allowedValues": {
+      "value": [
+       "Live",
+       "Testing",
+       "Demo",
+       "Experiment",
+       "UAT"
+      ]
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "ScaleTag",
+    "policyDefinitionId": "/subscriptions/36983755-8396-459d-8afa-b7d546b5a217/providers/Microsoft.Authorization/policyDefinitions/b5725656-a824-4e73-9158-33f303003ebd",
+    "parameters": {
+     "tagName": {
+      "value": "Scale"
+     },
+     "allowedValues": {
+      "value": [
+       "Normal",
+       "Temporary"
+      ]
+     }
+    },
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "OwnerTag",
+    "policyDefinitionId": "/subscriptions/36983755-8396-459d-8afa-b7d546b5a217/providers/Microsoft.Authorization/policyDefinitions/4cb46575-822f-48cb-a5e1-04a2a1b6def4",
+    "parameters": {
+     "tagName": {
+      "value": "Owner"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/subscriptions/36983755-8396-459d-8afa-b7d546b5a217/providers/Microsoft.Authorization/policySetDefinitions/d78e44ffe7934c94946b126f",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "d78e44ffe7934c94946b126f"
+}

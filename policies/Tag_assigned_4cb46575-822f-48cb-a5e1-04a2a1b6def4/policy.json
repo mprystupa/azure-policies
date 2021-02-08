@@ -1,0 +1,36 @@
+{
+ "properties": {
+  "displayName": "Tag assigned",
+  "policyType": "Custom",
+  "mode": "All",
+  "description": "Resource must have assigned Tag.",
+  "metadata": {
+   "category": "Tags",
+   "createdBy": "5401b9c6-9585-4145-a10f-4409654d0e75",
+   "createdOn": "2021-02-08T11:21:26.5299978Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "tagName": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Tag name",
+     "description": "Tag name."
+    }
+   }
+  },
+  "policyRule": {
+   "if": {
+    "field": "[concat('tags[', parameters('tagName'), ']')]",
+    "exists": false
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/subscriptions/36983755-8396-459d-8afa-b7d546b5a217/providers/Microsoft.Authorization/policyDefinitions/4cb46575-822f-48cb-a5e1-04a2a1b6def4",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "4cb46575-822f-48cb-a5e1-04a2a1b6def4"
+}
