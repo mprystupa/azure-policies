@@ -1,6 +1,6 @@
 {
  "properties": {
-  "displayName": "Correct Tag value",
+  "displayName": "Correct Tag value assigned",
   "policyType": "Custom",
   "mode": "All",
   "description": "Checks whether tag value is among correct ones.",
