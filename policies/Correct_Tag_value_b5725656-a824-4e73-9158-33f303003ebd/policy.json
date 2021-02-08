@@ -1,0 +1,53 @@
+{
+ "properties": {
+  "displayName": "Correct Tag value",
+  "policyType": "Custom",
+  "mode": "All",
+  "description": "Checks whether tag value is among correct ones.",
+  "metadata": {
+   "category": "Tags",
+   "createdBy": "5401b9c6-9585-4145-a10f-4409654d0e75",
+   "createdOn": "2021-02-08T10:32:22.911005Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "tagName": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Tag name",
+     "description": "Tag name."
+    }
+   },
+   "allowedValues": {
+    "type": "Array",
+    "metadata": {
+     "displayName": "Allowed tag values",
+     "description": "The list of allowed tag values."
+    }
+   }
+  },
+  "policyRule": {
+   "if": {
+    "not": {
+     "allOf": [
+      {
+       "field": "[concat('tags[', parameters('tagName'), ']')]",
+       "exists": true
+      },
+      {
+       "field": "[concat('tags[', parameters('tagName'), ']')]",
+       "in": "[parameters('allowedValues')]"
+      }
+     ]
+    }
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/subscriptions/36983755-8396-459d-8afa-b7d546b5a217/providers/Microsoft.Authorization/policyDefinitions/b5725656-a824-4e73-9158-33f303003ebd",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "b5725656-a824-4e73-9158-33f303003ebd"
+}
