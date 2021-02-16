@@ -1,0 +1,38 @@
+{
+ "properties": {
+  "displayName": "Remove Policy Test",
+  "policyType": "Custom",
+  "mode": "All",
+  "metadata": {
+   "category": "API Management",
+   "createdBy": "5401b9c6-9585-4145-a10f-4409654d0e75",
+   "createdOn": "2021-02-16T14:35:11.075717Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "allowedLocations": {
+    "type": "Array",
+    "metadata": {
+     "displayName": "Allowed locations",
+     "description": "The list of allowed locations for resources.",
+     "strongType": "location"
+    }
+   }
+  },
+  "policyRule": {
+   "if": {
+    "not": {
+     "field": "location",
+     "in": "[parameters('allowedLocations')]"
+    }
+   },
+   "then": {
+    "effect": "audit"
+   }
+  }
+ },
+ "id": "/subscriptions/36983755-8396-459d-8afa-b7d546b5a217/providers/Microsoft.Authorization/policyDefinitions/e1b7f672-b052-48c5-8e94-f29ec6a09eda",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "e1b7f672-b052-48c5-8e94-f29ec6a09eda"
+}
