@@ -93,7 +93,7 @@ try {
     Remove-AzPolicyDefinition -Id $policyId
 
     # Remove policy folder
-    Set-Location '..'
+    Set-Location ('../' + $policiesFolder)
     Remove-Item $policyFolderName
 }
 catch [Exception] {
