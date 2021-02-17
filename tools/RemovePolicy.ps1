@@ -90,7 +90,7 @@ try {
     }
 
     # Use Azure cmdlet to remove policy in the Azure portal
-    # Remove-AzPolicyDefinition -Id $policyId
+    Remove-AzPolicyDefinition -Id $policyId
 
     # Remove policy folder
     Set-Location ('../../' + $policiesFolder)
@@ -100,6 +100,7 @@ catch [Exception] {
     Write-Output $_.Exception.Message
     Undo-Transaction
     Set-Location $scriptPath
+    Read-Host -Prompt "Press Enter to exit"
     exit
 }
 
